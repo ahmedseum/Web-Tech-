@@ -1,0 +1,37 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <tr>
+    <?php
+for($i=0;$i<3;$i++)
+{
+    for($j=0;$j<=$i;$j++)
+    {
+        echo "* ";
+    }  
+    echo"<br>"; 
+}
+</tr>
+<tr>
+for($i=0;$i<3;$i++)
+{
+    for($j=0;$j<=2-$i;$j++)
+    {
+        echo $j+1," ";
+    }  
+    echo"<br>"; 
+}
+</tr><tr>
+for($i='A';$i<='C';$i++)
+{
+    for($j='A';$j<=$i;$j++)
+    {
+        echo $j," ";
+    }  
+    echo"<br>"; 
+}
+?>
+</tr>
+    </body>
+<html>
