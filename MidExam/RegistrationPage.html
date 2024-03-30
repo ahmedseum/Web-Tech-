@@ -1,0 +1,101 @@
+<?php
+session_start();
+ob_start();
+if($_SESSION["UserCheck"]!=true)
+{
+     header("Location: LoginPage.php");
+}
+else{
+    //$_SESSION["UserCheck"]=false;
+}
+?>
+<html>
+    <body>
+        <form method="post" action="Formvalidation.php" enctype="">
+        <table border="2" >
+            <tr>
+                <td colspan="3">
+                    <fieldset>
+                        <legend>Registration</legend>
+                        <table border="5" bordercolor="green" width="1500px">
+                            <tr>
+                                <td align="center">
+                                    <h3>First Name :</h3> 
+                                </td>
+                                <td>
+                                    <input type="text" name="F_name" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h3>Last Name:</h3> 
+                                </td>
+                                <td>
+                                    <input type="text" name="L_name" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h3>DOB :</h3> 
+                                </td>
+                                <td>
+                                    <input type="date" name="DOB" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h3>Gender :</h3> 
+                                </td>
+                                <td>
+                                    <input type="radio" name="Gender" value="Male"> Male
+                                    <input type="radio" name="Gender" value="Female">Female
+                                    <input type="radio" name="Gender" value="Other"> Other
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h3>Email :</h3> :</h3> 
+                                </td>
+                                <td>
+                                    <input type="email" name="email" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h3>Phone :</h3> :</h3> 
+                                </td>
+                                <td>
+                                    <input type="text" name="Phone" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h3>Password :</h3> :</h3> 
+                                </td>
+                                <td>
+                                    <input type="password" name="password" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h3>Confirm Password :</h3> :</h3> 
+                                </td>
+                                <td>
+                                    <input type="password" name="c_password" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align=" center" colspan="2"><input type="submit" name="submit" value="Submit"></tr>
+                                <!-- <td align="center" colspan="2">
+                                    <input type="Register" name="Register" value="Submit">
+                                </td> -->
+                            </tr>
+                            </table>
+                        </fieldset> 
+                    </td>  
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
